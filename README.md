@@ -8,3 +8,5 @@ Moja koleżanka poleciła mi projekty od DareIT, ponieważ sama kiedyś brała u
 
 Moim celem jest zdobycie nowych umiejętności i wiedzy z zakresu testowania automatycznego i Pythona. Myślę, że dzięki wsparciu grupy i doświadczonych mentorów uda się to bez problemu :)  
 
+###### Wynik testu PURPUROWEGO 
+5 z 14 pytań

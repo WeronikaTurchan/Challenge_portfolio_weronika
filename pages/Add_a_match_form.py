@@ -12,4 +12,5 @@ Matches_xpath = "//*[@class="MuiListItemText-root jss35 jss214"]"
 My_team_xpath = "//*[text()='My team']"
 Enemy_team_xpath = "//*[text()='Enemy team']"
 Time_Played_xpath = "//*[text()='Time played']"
-T-shirt_color_xpath = "//*[@name='tshirt'] "
+Tshirt_color_xpath = "//*[@name='tshirt'] "
+pass

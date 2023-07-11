@@ -13,8 +13,19 @@ class BasePage():
 
     def field_send_keys(self, selector: object, value: object, locator_type: object = By.XPATH) -> object:
         return self.driver.find_element(locator_type, selector).send_keys(value)
-    #def field_send_password(self, selector: object, value: object, locator_type: object =By.XPATH):
-     #   return self.driver.find_element(locator_type, selector).send_password(value)
 
     def click_on_the_element(self, selector, selector_type=By.XPATH):
         return self.driver.find_element(selector_type, selector).click()
+
+    def get_page_title(self, url):
+        self.driver.get(url)
+        return self.driver.title
+
+    def assert_element_text(self, driver, xpath, expected_text):
+        element = driver.find_element(by=By.XPATH, value=xpath)
+        element_text = element.text
+        assert expected_text == element_text
+
+    @classmethod
+    def setUp(cls, self):
+        pass

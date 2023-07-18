@@ -22,10 +22,15 @@ class Dashboard(BasePage):
     add_player_expected_title = "Add player"
 
     def title_of_page(self):
-        time.sleep(5)
+        self.wait_for_element_to_be_clicable(self.button_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
 
     def add_player_page(self):
         self.click_on_the_element(self.Add_player_xpath)
         time.sleep(5)
         assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
+
+    def language(self):
+        self.click_on_the_element(self.Language_xpath)
+        time.sleep(5)
+

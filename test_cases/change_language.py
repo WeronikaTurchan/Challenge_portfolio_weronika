@@ -23,22 +23,17 @@ class TestLoginPage(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_logowania(self):
-        user_login = LoginPage(self.driver)
-
-    def test_log_in_to_the_system(self):
+    def test_log_in_the_system(self):
         BasePage.setUp(self)
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
-        #element_text = BasePage(self.driver)
-        #element_text.assert_element_text(self.driver,'//*/h5', 'Scouts Panel')
         user_login.type_in_email('user05@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.title_of_page()
+        dashboard_page.language()
         time.sleep(5)
-
+        
     @classmethod
     def tearDown(self):
         self.driver.quit()

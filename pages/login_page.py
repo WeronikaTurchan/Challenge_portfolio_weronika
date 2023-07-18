@@ -31,3 +31,8 @@ class LoginPage(BasePage):
     #def add_player_page(self):
      #   self.click_on_the_element(self.Add_player_xpath)
       #  assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
+   # def type_in_name(self, name):
+    #    self.field_send_keys(self,)
+        pass
+
+

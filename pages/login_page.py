@@ -33,6 +33,16 @@ class LoginPage(BasePage):
       #  assert self.get_page_title(self.add_player_url) == self.add_player_expected_title
    # def type_in_name(self, name):
     #    self.field_send_keys(self,)
+
+    def click_language_button(self) -> object:
+        """
+
+        :rtype: object
+        """
+
+    def info_after_login(self):
         pass
+        
+
 
 

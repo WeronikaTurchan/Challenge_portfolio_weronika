@@ -39,13 +39,14 @@ class TestAddAPlayer(unittest.TestCase):
         add_player.type_in_weight('95')
         add_player.type_in_height('192')
         add_player.type_in_age('17.05.1999')
+        add_player.type_in_leg()
+        add_player.type_in_club('Manchester')
+        add_player.type_in_position('Goalkeeper')
+        add_player.type_in_district()
+        add_player.type_in_achievements('None')
+        add_player.type_in_language('Polish')
+        add_player.submit_add_player()
         time.sleep(5)
-
-    #def test_Add_a_player(self):
-     #   add_player = AddAPlayer(self.driver)
-      #  add_player.type_in_name('Karol')
-       # add_player.type_in_surname('Lisek')
-        #time.sleep(5)
 
     @classmethod
     def tearDown(self):

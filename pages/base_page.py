@@ -10,7 +10,7 @@ from utils.settings import DEFAULT_LOCATOR_TYPE
 
 class BasePage():
 
-    def __init__(self, driver: WebDriver):
+    def __init__(self, driver: WebDriver) -> object:
         """
 
         :rtype: object
@@ -42,3 +42,6 @@ class BasePage():
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
         time.sleep(3)
+
+    def assert_element_text(self, driver, param, param1):
+        pass

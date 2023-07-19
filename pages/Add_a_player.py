@@ -1,3 +1,4 @@
+import time
 from pages.base_page import BasePage
 
 
@@ -8,12 +9,17 @@ class AddAPlayer (BasePage):
     Phone_xpath = "//*[@name='phone']"
     Weight_xpath = "//*[@name='weight']"
     Height_xpath = "//*[@name='height']"
-    Age_xpath = "//*[@type='date']"
+    Age_xpath = "//*[@name='age']"
     Leg_xpath = "//*[@id='mui-component-select-leg']"
+    Right_leg_xpath = "//*[@id='menu-leg']/div[3]/ul/li[1]"
+    Left_Leg_xpath = "//*[@id='menu-leg']/div[3]/ul/li[2]"
     Club_xpath = "//*[@name='club']"
     Main_position_xpath = "//*[@name='mainPosition']"
     District_xpath = "//*[@id='mui-component-select-district']"
+    Opole_xpath = "//*[@id='menu-district']/div[3]/ul/li[8]"
+    Achievements_xpath = "//*[@name='achievements']"
     Add_language_xpath = "//*[text()='Add language']"
+    Enter_language_xpath = "//*/div[15]/div/div/div/input"
     Submit_button_xpath = "//*/div[3]/button[1]/span[1]"
     Clear_button_xpath = "//*/button[2]/span[1]"
 
@@ -38,4 +44,28 @@ class AddAPlayer (BasePage):
     def type_in_age(self, age):
         self.field_send_keys(self.Age_xpath, age)
 
+    def type_in_leg(self):
+        self.click_on_the_element(self.Leg_xpath)
+        self.click_on_the_element(self.Left_Leg_xpath)
+
+    def type_in_club(self, club):
+        self.field_send_keys(self.Club_xpath, club)
+
+    def type_in_position(self, position):
+        self.field_send_keys(self.Main_position_xpath, position)
+
+    def type_in_district(self):
+        self.click_on_the_element(self.District_xpath)
+        self.click_on_the_element(self.Opole_xpath)
+
+    def type_in_achievements(self, achievements):
+        self.field_send_keys(self.Achievements_xpath, achievements)
+
+    def type_in_language(self, language):
+        self.click_on_the_element(self.Add_language_xpath)
+        self.field_send_keys(self.Enter_language_xpath, language)
+
+    def submit_add_player(self):
+        self.click_on_the_element(self.Submit_button_xpath)
+    time.sleep(5)
 

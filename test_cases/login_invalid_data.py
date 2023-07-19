@@ -11,6 +11,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
 class TestLoginPage(unittest.TestCase):
+
     driver = None
 
     @classmethod
@@ -26,9 +27,8 @@ class TestLoginPage(unittest.TestCase):
         BasePage.setUp(self)
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
-        user_login.type_in_email('user05@getnada.com')
-        user_login.type_in_password('Test-1234')
+        user_login.type_in_email('user05@getnada.comm')
+        user_login.type_in_password('Test-123')
         user_login.click_sign_in_button()
-        dashboard_page = Dashboard(self.driver)
-        dashboard_page.title_of_page()
+        user_login.info_after_login()
         time.sleep(5)

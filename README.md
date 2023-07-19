@@ -48,3 +48,5 @@ Moim celem jest zdobycie nowych umiejętności i wiedzy z zakresu testowania aut
 
 //div/button/span
 
+
+Link do Google Drive: https://drive.google.com/drive/folders/1erUY5k-0CWeZ_ISzWyDdSCejBsOM23dX?usp=sharing

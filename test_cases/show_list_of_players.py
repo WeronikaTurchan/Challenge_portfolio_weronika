@@ -10,7 +10,7 @@ from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestLoginPage(unittest.TestCase):
+class TestShowPlayers(unittest.TestCase):
 
     driver = None
 
@@ -33,3 +33,7 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page = Dashboard(self.driver)
         dashboard_page.players()
         time.sleep(5)
+
+    @classmethod
+    def tearDown(self):
+        self.driver.quit()

@@ -10,7 +10,7 @@ from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestLoginPage(unittest.TestCase):
+class TestLoginPageInvalidData(unittest.TestCase):
 
     driver = None
 
@@ -32,3 +32,7 @@ class TestLoginPage(unittest.TestCase):
         user_login.click_sign_in_button()
         user_login.info_after_login()
         time.sleep(5)
+
+    @classmethod
+    def tearDown(self):
+        self.driver.quit()
